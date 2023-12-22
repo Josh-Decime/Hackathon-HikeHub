@@ -3,10 +3,10 @@
 
         <div class="col-4 ">
             <div class="sticky-top ">
-                <form onsubmit="" class="form-control mt-3 foreground-orange">
+                <form onsubmit="app.PostsController. createPost()"" class=" form-control mt-3 foreground-orange">
                     <div>
                         <input required class="m-1 w-100" type="text" placeholder="Your Title Here" minlength="3"
-                            maxlength="50" name="Title" id="Title">
+                            maxlength="50" name="title" id="title">
                     </div>
                     <div>
                         <input required class="m-1 w-100" type="url" placeholder="Put a image URL here" minlength="10"
@@ -17,7 +17,7 @@
                             rows="10" placeholder="Your super amazing description goes here"></textarea>
                     </div>
                     <div class="text-end m-1 mt-2">
-                        <button onsubmit="" class="btn wood-brown light-text">POST!</button>
+                        <button type="submit" class="btn wood-brown light-text">POST!</button>
                     </div>
                 </form>
             </div>

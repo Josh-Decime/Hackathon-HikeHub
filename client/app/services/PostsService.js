@@ -6,6 +6,10 @@ import { api } from "./AxiosService.js"
 
 
 class PostsService {
+    async createPost(postData) {
+        const response = await api.post('api/posts', postData)
+        console.log('📬 Post going through the API:', response.data)
+    }
 
 }
 
