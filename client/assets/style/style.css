@@ -1,1 +1,14 @@
 /* BASIC STYLES HERE */
+
+
+
+.img-container {
+    height: auto;
+    max-height: 75vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.wood-brown {
+    background-color: #5c463c;
+}

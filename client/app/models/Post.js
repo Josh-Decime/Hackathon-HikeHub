@@ -9,4 +9,16 @@ export class Post {
         this.createdAt = new Date(data.createdAt)
         this.updatedAt = new Date(data.updatedAt)
     }
+
+    get PostTemplate() {
+        return `
+         <div class=" bg-secondary rounded mt-3">
+            <p class="fs-3 px-3 my-0">${this.title}</p>
+            <p class="px-3">${this.description}</p>
+            <img class="img-container"
+                src="${this.imgUrl}"
+                alt="Picture of ${this.title}">
+        </div>
+        `
+    }
 }
