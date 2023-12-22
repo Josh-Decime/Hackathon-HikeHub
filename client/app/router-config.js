@@ -9,19 +9,12 @@ export const router = new Router([
   {
     path: '',
     controllers: [PostsController],
-    view: /*html*/`
-    <div class="bg-white p-3">
-      <div class="card-body">
-        <p>Home Page</p>
-        <button class="btn btn-dark" onclick="app.HomeController.testButton()">😎</button>
-      </div>
-    </div>
-    `
+    view: 'app/views/PostView.html'
   },
-  {
-    path: '#/about',
-    view: 'app/views/AboutView.html'
-  },
+  // {
+  //   path: '#/about',
+  //   view: 'app/views/AboutView.html'
+  // },
   {
     path: '#/account',
     middleware: [AuthGuard],

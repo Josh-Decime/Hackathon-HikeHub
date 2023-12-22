@@ -1,1 +1,10 @@
 /* BASIC STYLES HERE */
+
+
+
+.img-container {
+    height: auto;
+    max-height: 75vh;
+    width: 100%;
+    object-fit: cover;
+}
