@@ -12,7 +12,7 @@ export class Post {
 
     get PostTemplate() {
         return `
-         <div class=" bg-secondary rounded mt-3">
+         <div class="foreground-orange rounded mt-3">
             <p class="fs-3 px-3 my-0">${this.title}</p>
             <p class="px-3">${this.description}</p>
             <img class="img-container"

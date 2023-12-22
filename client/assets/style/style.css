@@ -1,6 +1,9 @@
 /* BASIC STYLES HERE */
 
-
+.logo {
+    height: 60px;
+    width: 60px;
+}
 
 .img-container {
     height: auto;
@@ -10,5 +13,29 @@
 }
 
 .wood-brown {
-    background-color: #5c463c;
+    /* background-color: #5c463c; */
+    background-color: #2b1217;
+}
+
+.header-font {
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Single Day', cursive;
+    font-size: 80px;
+    color: #fef3c9;
+}
+
+.background-orange {
+    background-color: #f7cb9a;
+}
+
+.foreground-orange {
+    background-color: #dc633b;
+}
+
+.button-color {
+    background-color: #f83323;
+}
+
+.light-text {
+    color: #fef3c9;
 }

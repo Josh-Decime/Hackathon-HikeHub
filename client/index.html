@@ -10,6 +10,12 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
     integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Single+Day&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js"
@@ -17,7 +23,9 @@
   <title>Hackathon-HikeHub</title>
 </head>
 
-<body class="debug">
+<!-----------debug -->
+
+<body class="">
   <!-- SECTION -->
   <header>
     <!-- <nav class="navbar navbar-dark navbar-expand bg-dark text-light px-2">
@@ -35,15 +43,26 @@
           <a href="#/about" class="nav-link">About</a>
         </div>
       </div> -->
-    <div class="wood-brown">
+    <nav class="wood-brown container-fluid">
+      <div class="row">
 
-    </div>
-    <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
+        <div class="col-12 d-flex justify-content-between align-items-center">
+          <div>
+            <img class="logo" src="/assets/img/HikerHub-logo.png" alt="HikerHub logo">
+          </div>
+          <div>
+            <h1 class="text-center header-font">HikeHub</h1>
+          </div>
+          <div class=" justify-content-end align-items-center d-flex" id="authstate"></div>
+        </div>
+      </div>
     </nav>
+
+    <!-- </nav> -->
   </header>
 
   <!-- SECTION -->
-  <main>
+  <main class="background-orange">
 
     <section id="router-view">
       <!-- primary viewport -->
