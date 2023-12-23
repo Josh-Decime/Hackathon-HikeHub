@@ -14,7 +14,9 @@ function _drawPosts() {
 export class PostsController {
     constructor() {
         console.log('📬post controller online')
+        this.getPosts()
         _drawPosts()
+        AppState.on('user', _drawPosts)
     }
 
     async createPost() {
@@ -27,6 +29,15 @@ export class PostsController {
             // @ts-ignore
             form.reset()
 
+        } catch (error) {
+            console.error(error)
+            Pop.error(error.message)
+        }
+    }
+
+    async getPosts() {
+        try {
+            await postsService.getPosts()
         } catch (error) {
             console.error(error)
             Pop.error(error.message)
