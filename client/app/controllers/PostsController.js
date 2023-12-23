@@ -14,15 +14,34 @@ function _drawPosts() {
 export class PostsController {
     constructor() {
         console.log('📬post controller online')
+        this.getPosts()
         _drawPosts()
+        AppState.on('user', _drawPosts)
     }
 
-    // async getPosts(){
-    //     try {
+    async createPost() {
+        try {
+            event.preventDefault()
+            const form = event.target
+            const postData = getFormData(form)
+            console.log('📬🎮form data in the controller:', postData)
+            await postsService.createPost(postData)
+            // @ts-ignore
+            form.reset()
 
-    //     } catch (error) {
+        } catch (error) {
+            console.error(error)
+            Pop.error(error.message)
+        }
+    }
 
-    //     }
-    // }
+    async getPosts() {
+        try {
+            await postsService.getPosts()
+        } catch (error) {
+            console.error(error)
+            Pop.error(error.message)
+        }
+    }
 
 }
