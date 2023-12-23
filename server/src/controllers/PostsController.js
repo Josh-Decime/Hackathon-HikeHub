@@ -1,10 +1,7 @@
 
 
 
-// TODO write the controller
-// TODO Get All Posts
-// TODO Get One Post
-// Auth middleware
+// Auth middleware?? I think I did this
 // TODO Create Posts - don't forget to attach the user
 // TODO Update post
 // TODO Delete post
@@ -21,6 +18,8 @@ export class PostsController extends BaseController {
             .get('', this.getPosts)
             .get('', this.getPostById)
             .use(Auth0Provider.getAuthorizedUserInfo)
+            .delete('/:postId', this.deletePost)
+            // .put updatepost
             .post('', this.createPost)
     }
     async getPosts(request, response, next) {
@@ -51,6 +50,24 @@ export class PostsController extends BaseController {
             response.send(post)
         } catch (error) {
             next(error)
+        }
+    }
+
+    async deletePost(request, response, next) {
+        try {
+            const postId = request.params.postId
+            const message = await postsService.deletePost(postId)
+            response.send(message)
+        } catch (error) {
+            next(error)
+        }
+    }
+
+    async updatePost(request, response, next) {
+        try {
+
+        } catch (error) {
+
         }
     }
 }
